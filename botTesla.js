@@ -76,7 +76,7 @@ const OyunYaratHusnuEhedov = chatId => {
 
 const ozelMesaj = isGroup => Degisken(`
     *Salam,Mən ElegantGameBot Təxmin Oyunuyam Vaxtınızı əyləncəli hala gətirmək üçün\nTelegram oyun botuyum🤖*
-    ${isGroup ? "" : "\n*Əmirlərimə Baxmaq Üçün /help*"}
+    ${isGroup ? "" : "\n *Əmirlərimə Baxmaq Üçün /help*"}
 `)
 
 
@@ -168,7 +168,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
-		❓ Sizce bu kişi kaç yaşında
+		❓ Sizcə Bu Kişinin Neçə Yaşı Var
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
@@ -289,7 +289,7 @@ bot.command("elegant", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindən,\n\nYaş Taxmin Oyunu Başladı 🎉</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindən,\n\n Yaş Təxmin Oyunu Başladı 🎉</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
@@ -334,7 +334,7 @@ bot.command("top", (ctx) => {
 			})
 			if (top.length > 0) {
 				ctx.replyWithMarkdown(Degisken(`
-*🔝Bu Qrupda Ən Yaxşı Top 25:
+*🔝Bu Qrupda Ən Yaxşı Top 25:*
 
 ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan🎁", "puan🎁", "puan🎁")}`).join("\n")}
 				`))
