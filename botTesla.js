@@ -394,8 +394,8 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *Salam! "Tahimin" oyunu üçün\noluşturulmuş bir botam🤖*\n🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n\n_Qaydalar👇🏻 : Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ ,❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /tesla əmrini işə salın. 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Əmrlər siyahı👇🏻*\n\n🎲 /elegant - _Oyunu Başlat_\n⛔️ /stop - _Oyunu Dayandır_\n📊 /top - _Qrub Oyunçuların Xalları_\n_🌍 /gtop - Global TOP 20 Oyunçular_\nℹ️ /help - _Bot Haqqında_\n👤 /kullanici - _Qrup ID sini Göstərər_\n🆔 /id - _Grup infosu_`))
+        *Salam! "Tahimin" oyunu üçün\noluşturulmuş bir botam🤖*\n🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n\n_Qaydalar👇🏻_ : Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ ,❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /tesla əmrini işə salın. 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
+          *Əmrlər siyahı👇🏻*\n\n🎲 /elegant - _Oyunu Başlat_\n⛔️ /stop - _Oyunu Dayandır_\n📊 /top - _Qrub Oyunçuların Xalları_\n_🌍 /gtop - _Global TOP 20 Oyunçular_\nℹ️ /help - _Bot Haqqında_\n👤 /kullanici - _Qrup ID sini Göstərər_\n🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
