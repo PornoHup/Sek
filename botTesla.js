@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /game")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /elegant")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -268,7 +268,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 
 
 
-bot.command("game", (ctx) => {
+bot.command("elegant", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
@@ -358,7 +358,7 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 
 
 /// /// /// /// /// /// ///  <!-- GLOBAL KULLANICI RATING --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
-bot.command("g", (ctx) => {
+bot.command("gtop", (ctx) => {
     fs.readFile(dbfile, 'utf8', async function(err, doc) {
         var comments = doc.match(/-100\d+/g)
         let top = []
@@ -395,7 +395,7 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
         *Merhaba! "Tahimin" oyunu için\noluşturulmuş bir botum🤖*\n🆘*Bot yalnızca gruplar için tasarlanmıştır!*\n\n_ℹ️Kurallar budur : Sana resimler atıyorum ve sen kategoriye uyğun rakamlarla tahmin etmelisin🕵🏼‍♂️,İlk olarak qrupa ekle ve Grupda medya izini açık olsun unutma! veya Botu yönetici yapın_🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Temel Komutların Listesi👇🏻*\n\n🎲 /game - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /g - Global Puanlar_\nℹ️ /help - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
+          *Temel Komutların Listesi👇🏻*\n\n🎲 /elegant - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /gtop - Global Puanlar_\nℹ️ /help - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
