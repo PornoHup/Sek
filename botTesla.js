@@ -44,7 +44,7 @@ bot.command("txt", async (ctx) => {
                 parse_mode: 'HTML'
             })
         } else {
-            ctx.reply('Botta henüz oyun oynanmadı.')
+            ctx.reply('Botta hələ oyun oynanmadı.')
         }
     })
 });
@@ -55,7 +55,7 @@ bot.command("grupsayi", async (ctx) => {
         if (comments && comments.length > 0) {
             await ctx.replyWithHTML(`<i>Grup sayısı:  ${comments.length}</i>`)
         } else {
-            ctx.reply('Botta henüz oyun oynanmadı.')
+            ctx.reply('Botta hələ oyun oynanmadı.')
         }
     })
 });
@@ -75,8 +75,8 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben ElegantGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
-    ${isGroup ? "" : "\n*Temel komutların listesi için /help*"}
+    *Salam,Mən ElegantGameBot Təxmin Oyunuyam Vaxtınızı əyləncəli hala gətirmək üçün\nTelegram oyun botuyum🤖*
+    ${isGroup ? "" : "\n*Əmirlərimə Baxmaq Üçün /help*"}
 `)
 
 
@@ -142,7 +142,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		db.update(chatId, ch => chat)
 		if (top.length > 0) {
 			ctx.replyWithMarkdown(Degisken(`
-				*🌟 Kazananlar Sıralaması:*
+				*🌟 Qazananlar Sıralaması:*
 
 				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan 🎁", "puan 🎁", "puan 🎁")}`).join("\n")}
 			`))
@@ -230,7 +230,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			if (!top.every(member => member.answer === null)) {
 				ctx.replyWithMarkdown(
 					Degisken(`
-						✅ Fotoğraftaki Kişi: *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Puan Kazananlar:*
+						✅  Şəkildəki kişi:*${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Puan Kazananlar:*
 
 						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
@@ -240,7 +240,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 				)
 			}
 			else {
-				ctx.reply("Cevap verilmedi, Oyun Durduruldu❕")
+				ctx.reply("Küsdüm, oynamırsız mənimlə 🙁 Oyun dayandırıldı ❕")
 				OyunDurdurHusnuEhedov(ctx, chatId)
 				return
 			}
@@ -275,7 +275,7 @@ bot.command("elegant", (ctx) => {
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("❗️ Oyun şuan aktif, durdurmak için /stop.")
+				return ctx.reply("⛔️ Oyun davam edir dayandırmaq üçün /stop.")
 			}
 			else {
 				chat.isPlaying = true
@@ -289,11 +289,11 @@ bot.command("elegant", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tarafından,\n\nYaş Tahmin Oyunu Başladı 🎉</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindən,\n\nYaş Taxmin Oyunu Başladı 🎉</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
-		ctx.reply("🛑 Bu komut gruplar için geçerli")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
 	}
 })
 
@@ -306,7 +306,7 @@ bot.command("stop", (ctx) => {
         OyunDurdurHusnuEhedov(ctx, chatId)
     }
     else {
-        ctx.reply("🛑 Bu komut gruplar için geçerli")
+        ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
     }
 })
 
