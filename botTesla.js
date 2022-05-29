@@ -334,13 +334,13 @@ bot.command("top", (ctx) => {
 			})
 			if (top.length > 0) {
 				ctx.replyWithMarkdown(Degisken(`
-*🔝Bu Qrupda Ən Yaxşı Top 20:*
+*🔝 Bu Qrupda Ən Yaxşı Top 20*
 
 ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan🎁", "puan🎁", "puan🎁")}`).join("\n")}
 				`))
 			}
 			else {
-				ctx.reply("❗️ Bu grupta heç oyun oynamadınız")
+				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
 			}
 		}
 		else {
@@ -381,7 +381,7 @@ bot.command("gtop", (ctx) => {
             }
             if (top.length > 0) {
                 ctx.replyWithHTML(Degisken(`
-     <b>🎖Global Üzrə Ən Yaxşı Top-20</b>\n
+     <b>🎖 Global Üzrə Ən Yaxşı Top-20</b>\n
 ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} → ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
                 `))
             }
