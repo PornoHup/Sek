@@ -340,7 +340,7 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 				`))
 			}
 			else {
-				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
+				ctx.reply("❗️ Bu grupta heç oyun oynamadınız")
 			}
 		}
 		else {
