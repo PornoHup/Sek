@@ -427,7 +427,7 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Qruba Əlavə Et✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Botu Qruba Əlavə Et✅', url:`https://t.me/ElegantGameBot?startgroup`}],
                 [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
@@ -440,7 +440,7 @@ bot.action('start', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Qruba Əlavə Et✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Botu Qruba Əlavə Et✅', url:`//t.me/ElegantGameBot?startgroup`}],
                 [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
