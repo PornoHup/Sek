@@ -75,7 +75,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben TeslaGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
+    *Merhaba,Ben ElegantGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
     ${isGroup ? "" : "\n*Temel komutların listesi için /yardim*"}
 `)
 
@@ -392,10 +392,10 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 
 
-bot.command("yardim", (ctx) => {
+bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
         *Merhaba! "Tahimin" oyunu için\noluşturulmuş bir botum🤖*\n🆘*Bot yalnızca gruplar için tasarlanmıştır!*\n\n_ℹ️Kurallar budur : Sana resimler atıyorum ve sen kategoriye uyğun rakamlarla tahmin etmelisin🕵🏼‍♂️,İlk olarak qrupa ekle ve Grupda medya izini açık olsun unutma! veya Botu yönetici yapın_🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Temel Komutların Listesi👇🏻*\n\n🎲 /game - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /g - Global Puanlar_\nℹ️ /yardim - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
+          *Temel Komutların Listesi👇🏻*\n\n🎲 /game - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /g - Global Puanlar_\nℹ️ /help - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
@@ -428,7 +428,7 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -441,7 +441,7 @@ bot.action('start', ctx=>{
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/teslagametr`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -468,8 +468,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 VİP Gruplar 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Qrup ', url:'t.me/husnublog'}],
-                [{text:'2) Qrup ', url:'t.me/husnublog'}],
+                [{text:'1) Qrup ', url:'t.me/SecretMMC'}],
+                [{text:'2) Qrup ', url:'t.me/SecretMMC'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -484,8 +484,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Grub', url:'t.me/husnublog'}],
-                [{text:'2) Grub', url:'t.me/husnublog'}],
+                [{text:'1) Grub', url:'t.me/SecretMMC'}],
+                [{text:'2) Grub', url:'t.me/SecretMMC'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
