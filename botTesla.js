@@ -334,21 +334,21 @@ bot.command("top", (ctx) => {
 			})
 			if (top.length > 0) {
 				ctx.replyWithMarkdown(Degisken(`
-*✅ Grup En İyi TOP 20 Oyuncu:*
+*🔝Bu Qrupda Ən Yaxşı Top 25:
 
 ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["","",""][index] || ""} ${index + 1}) *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan🎁", "puan🎁", "puan🎁")}`).join("\n")}
 				`))
 			}
 			else {
-				ctx.reply("❗️ Bu grupta hiç oyun oynamadınız")
+				ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
 			}
 		}
 		else {
-			ctx.reply("🛑 Bu komut gruplar için geçerli")
+			ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
 		}
 	}
 	else {
-		ctx.reply("🛑 Bu komut gruplar için geçerli")
+		ctx.reply("🆘 Bu əmr qruplar üçün etibarlıdır \n\n📣 Kanalımıza gözləyirik @SecretMMC")
 	}
 })
 /// /// /// /// /// /// ///  <!-- GRUB KULLANICI RATING SON --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
@@ -381,7 +381,7 @@ bot.command("gtop", (ctx) => {
             }
             if (top.length > 0) {
                 ctx.replyWithHTML(Degisken(`
-     <b>🎖Gruplar Üzre En İyi Top-20</b>\n
+     <b>🎖Global Üzrə Ən Yaxşı Top-20</b>\n
 ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${["🥇","🥈","🥉"][index] || "🎲"} ${index + 1}) <b><i>${member.firstName} → ${member.score} ${HusnuEhedov(member.score, "puan", "puan", "puan")}</i></b>`).join("\n")}
                 `))
             }
@@ -394,8 +394,8 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *Merhaba! "Tahimin" oyunu için\noluşturulmuş bir botum🤖*\n🆘*Bot yalnızca gruplar için tasarlanmıştır!*\n\n_ℹ️Kurallar budur : Sana resimler atıyorum ve sen kategoriye uyğun rakamlarla tahmin etmelisin🕵🏼‍♂️,İlk olarak qrupa ekle ve Grupda medya izini açık olsun unutma! veya Botu yönetici yapın_🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Temel Komutların Listesi👇🏻*\n\n🎲 /elegant - _Oyunu Başlat_\n⛔️ /stop - _Oyunu durdurmak_\n📊 /top - _Oyuncuların puanı gösterir_\n_🌍 /gtop - Global Puanlar_\nℹ️ /help - _Size yardım edicek_\n👤 /kullanici - _Kullanıcı hakkında bilgi_\n🆔 /id - _Grup infosu_`))
+        *Salam! "Tahimin" oyunu üçün\noluşturulmuş bir botam🤖*\n🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n\n_Qaydalar👇🏻 : Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ ,❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /tesla əmrini işə salın. 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n_Sonra Komutlarla ile oyunu başladın_🎯\n
+          *Əmrlər siyahı👇🏻*\n\n🎲 /elegant - _Oyunu Başlat_\n⛔️ /stop - _Oyunu Dayandır_\n📊 /top - _Qrub Oyunçuların Xalları_\n_🌍 /gtop - Global TOP 20 Oyunçular_\nℹ️ /help - _Bot Haqqında_\n👤 /kullanici - _Qrup ID sini Göstərər_\n🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
@@ -427,8 +427,8 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Qruba Əlavə Et✅', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -440,8 +440,8 @@ bot.action('start', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Qruba Əlavə Et✅', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
+                [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
