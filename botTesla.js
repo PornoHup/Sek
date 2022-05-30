@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /elegant")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu Başlat ➡️  /elegand")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -428,7 +428,7 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Qruba Əlavə Et✅', url:`https://t.me/ElegandGameBot?startgroup`}],
-                [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Rəsmi Kanalımız📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -441,7 +441,7 @@ bot.action('start', ctx=>{
         reply_markup:{
             inline_keyboard:[
                 [{text:'Botu Qruba Əlavə Et✅', url:`//t.me/ElegandGameBot?startgroup`}],
-                [{text:'Rəsmi Kanalımız 📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Rəsmi Kanalımız📣', url:`t.me/SecretMMC`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -515,7 +515,7 @@ bot.on("message", async (ctx) => {
 			let answer = Number(message.text)
 			if (answer <= 0 || answer > 100) {
 				return ctx.reply(
-					"Cevap Sınırı (1 - 100)",
+					"Cavab Sınırı (1 - 100)",
 					{
 						reply_to_message_id: ctx.message.message_id,
 					}
