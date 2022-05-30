@@ -268,7 +268,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 
 
 
-bot.command("elegant", (ctx) => {
+bot.command("elegand", (ctx) => {
 	let message = ctx.update.message
 	if (message.chat.id < 0) {
 		let chatId = message.chat.id
@@ -394,7 +394,7 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
-        *Salam! "Təxmin" oyunu üçün\n  oluşturulmuş bir botam🤖*\n \n 🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n \n _Qaydalar👇🏻_ \n \n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ , \n \n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegant əmrini işə salın. \n \n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n \n _Sonra Komutlarla ile oyunu başladın_🎯\n
+        *Salam! "Təxmin" oyunu üçün\n  oluşturulmuş bir botam🤖*\n \n 🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n \n _Qaydalar👇🏻_ \n \n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ , \n \n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegand əmrini işə salın. \n \n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n \n _Sonra Komutlarla ile oyunu başladın_🎯\n
           *Əmrlər siyahı👇🏻*\n\n 🎲 /elegant - _Oyunu Başlat_\n ⛔️ /stop - _Oyunu Dayandır_\n 📊 /top20 - _Qrub Oyunçuların Xalları_ \n 🌍 /global - _Global TOP 20 Oyunçular_\n ℹ️ /help - _Bot Haqqında_\n 👤 /kullanici - _Öz Profilinə Bax_\n 🆔 /id - _Grup infosu_`))
 })
 
