@@ -436,7 +436,7 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Salam,Mən ElegantGameBot Təxmin Oyunuyam Vaxtınızı əyləncəli hala gətirmək üçün\nTelegram oyun botuyum🤖* ${isGroup ? "" : "\n *Əmirlərimə Baxmaq Üçün /help*"
+    ctx.replyWithMarkdown(`*Salam,Mən ElegantGameBot Təxmin Oyunuyam Vaxtınızı əyləncəli hala gətirmək üçün\nTelegram oyun botuyum🤖* "\n *Əmirlərimə Baxmaq Üçün /help*"
         `,{
         reply_markup:{
             inline_keyboard:[
