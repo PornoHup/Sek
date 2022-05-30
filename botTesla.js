@@ -170,7 +170,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
 		🧔🏻 Yaşını Təxmin Et!
 		${answers.length > 0 ? 
-			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
+			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n ")}\n `
 			:
 			""
 		}
@@ -230,7 +230,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			if (!top.every(member => member.answer === null)) {
 				ctx.replyWithMarkdown(
 					Degisken(`
-						✅  Şəkildəki kişi:*${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Puan Kazananlar:*
+						✅  Şəkildəki kişi:*${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n *⭐️Puan Kazananlar:*
 
 						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
@@ -358,7 +358,7 @@ ${top.sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `${[
 
 
 /// /// /// /// /// /// ///  <!-- GLOBAL KULLANICI RATING --> /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// /// 
-bot.command("gtop", (ctx) => {
+bot.command("global", (ctx) => {
     fs.readFile(dbfile, 'utf8', async function(err, doc) {
         var comments = doc.match(/-100\d+/g)
         let top = []
@@ -395,7 +395,7 @@ ${(top).sort((a, b) => b.score - a.score).slice(0, 20).map((member, index) => `$
 bot.command("help", (ctx) => {
     return ctx.replyWithMarkdown(Degisken(`
         *Salam! "Təxmin" oyunu üçün\n  oluşturulmuş bir botam🤖*\n \n 🆘*Bot sadəcə gruplar üçün hazırlanmışdır!*\n \n _Qaydalar👇🏻_ \n \n Mən sizə bir şəkil göndərdiyim zaman kateqoriyaya uyğun rəqəmlərlə təxmin edəcəksiniz, bu qədər asandır.🕵🏼‍♂ , \n \n ❕ Əvvəlcə məni bir qrupa əlavə edin və sonra /elegant əmrini işə salın. \n \n 🎯(Qrupun media icazəsi açıq olmasını unutmayın.)🗣\n \n _Sonra Komutlarla ile oyunu başladın_🎯\n
-          *Əmrlər siyahı👇🏻*\n\n 🎲 /elegant - _Oyunu Başlat_\n ⛔️ /stop - _Oyunu Dayandır_\n 📊 /top - _Qrub Oyunçuların Xalları_ \n 🌍 /gtop - _Global TOP 20 Oyunçular_\n ℹ️ /help - _Bot Haqqında_\n 👤 /kullanici - _Öz Profilinə Bax_\n 🆔 /id - _Grup infosu_`))
+          *Əmrlər siyahı👇🏻*\n\n 🎲 /elegant - _Oyunu Başlat_\n ⛔️ /stop - _Oyunu Dayandır_\n 📊 /top - _Qrub Oyunçuların Xalları_ \n 🌍 /global - _Global TOP 20 Oyunçular_\n ℹ️ /help - _Bot Haqqında_\n 👤 /kullanici - _Öz Profilinə Bax_\n 🆔 /id - _Grup infosu_`))
 })
 
 bot.command("kullanici", async (ctx) => {
