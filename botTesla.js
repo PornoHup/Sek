@@ -75,7 +75,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Merhaba,Ben LuksGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖*
+    *Salam,Mən Nezringamebot Təxmin Oyunu Zamanınızı əyləncəli hala getirimek üçün\nTelegram oyun botuyum🦁*
     ${isGroup ? "" : "\n*Temel komutların listesi için /yardim*"}
 `)
 
@@ -142,7 +142,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		db.update(chatId, ch => chat)
 		if (top.length > 0) {
 			ctx.replyWithMarkdown(Degisken(`
-				*🌟 Kazananlar Sıralaması:*
+				*🌟 Qazananlar Sıralaması:*
 
 				${top.sort((a, b) => b.score - a.score).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${member.score} ${HusnuEhedov(member.score, "puan 🎁", "puan 🎁", "puan 🎁")}`).join("\n")}
 			`))
@@ -427,8 +427,8 @@ bot.start(async (ctx) => {
     await ctx.replyWithMarkdown(ozelMesaj(ctx.update.message.chat.id < 0),{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`https://t.me/LuksGameBot?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/LuksProject`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa At ✅', url:`https://t.me/nezringamebot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/nezrinlogo`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -436,12 +436,12 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Merhaba,Ben LuksGameBot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
+    ctx.replyWithMarkdown(`*Salam,Men nezringamebot Tahmin Oyunu Zamanınızı eğlenceli hale getirimek için\nTelegram oyun botuyum🤖\n**Temel komutların listesi için /yardim*
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'Botu Grupa Ekle ✅', url:`t.me/LuksGameBot?startgroup=true`}],
-                [{text:'Resmi Kanalımız 📣', url:`t.me/LuksProject`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
+                [{text:'Botu Grupa Ekle ✅', url:`t.me/nezringamebot?startgroup=true`}],
+                [{text:'Resmi Kanalımız 📣', url:`t.me/nezrinlogo`},{text:'VİP Gruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -451,7 +451,7 @@ bot.action('start', ctx=>{
 
 bot.action('vip', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*🌍 Ülkeler*`,{
+    ctx.replyWithMarkdown(`*🌍 Ölkələr*`,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'🇦🇿 Azərbaycan', callback_data:'AZ'}],
@@ -468,8 +468,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🇦🇿 ᴠɪᴘ ɢʀᴜᴘʟᴀʀ 🏆*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) ǫʀᴜᴘ ', url:'t.me/LuksGroup'}],
-                [{text:'2) ᴋᴀɴᴀʟ ', url:'t.me/LuksBlog'}],
+                [{text:'1) ǫʀᴜᴘ ', url:'t.me/nezrinsupp'}],
+                [{text:'2) ᴋᴀɴᴀʟ ', url:'t.me/nezrinblog'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -484,8 +484,8 @@ bot.action('TR', ctx=>{
         `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) ɢʀᴜᴘ', url:'t.me/LuksGroup'}],
-                [{text:'2) ᴋᴀɴᴀʟ', url:'t.me/LuksBlog'}],
+                [{text:'1) ɢʀᴜᴘ', url:'t.me/nezrinsupp'}],
+                [{text:'2) ᴋᴀɴᴀʟ', url:'t.me/linklerim2'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
